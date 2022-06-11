@@ -21,23 +21,13 @@
             done: false
         }
     ]
-
-    const handleAddTodo = () => {
-        const todo = {
-            id: list.length + 1,
-            content: '새로운 할 일',
-            done: false
-        }
-        // list.push(todo) 이거 안됌
-        list = [...list, todo]
-    }
-
 </script>
 <ul>
     {#each list as item}
         <li>
+            <p>{item.id}</p>
             <p>{item.content}</p>
+            <p>{item.done}</p>
         </li>
     {/each}
 </ul>
-<button on:click={handleAddTodo}>할일 추가</button>
