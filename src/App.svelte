@@ -1,11 +1,9 @@
 <script>
-    function handleClick_1(param) {
-        alert(`선택값 ${param}`)
-    }
+    import Child from './chap03/code3-25_3-26/child.svelte';
 
-    function handleClick_2(param) {
-        alert(`선택값 ${param}`)
-    }
+    let count = 0;
+
+    const handleClick = () => count = count + 1;
 </script>
-<button on:click={() => handleClick_1('1번')}>1번 버튼</button>
-<button on:click={() => handleClick_2('2번')}>2번 버튼</button>
+<Child carryValue={count}/>
+<button on:click={handleClick}>클릭</button>
