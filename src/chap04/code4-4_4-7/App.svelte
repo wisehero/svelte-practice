@@ -30,16 +30,12 @@
         </li>
     {/each}
 
-    <br>
-
     {#each todos as {id, content}}
         <li>
             <span>{id}</span>
             <span>{content}</span>
         </li>
     {/each}
-
-    <br>
 
     {#each todos as {id, content}, i}
         <li>
@@ -48,8 +44,6 @@
             <span>{content}</span>
         </li>
     {/each}
-
-    <br>
 
     {#each todos as todo (todo.id)}
         <li>
