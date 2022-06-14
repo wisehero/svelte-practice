@@ -1,8 +1,33 @@
 <script>
-    import Middle from './chap03/code3-32_3-34/middle.svelte';
-
-    let count = 0;
-
-    const handleClick = () => count = count + 1;
+    let todos = [
+        {
+            id: 1,
+            content: '첫 번째 할일',
+            done: false
+        },
+        {
+            id: 2,
+            content: '두 번째 할일',
+            done: false
+        },
+        {
+            id: 3,
+            content: '세 번째 할일',
+            done: false
+        },
+        {
+            id: 4,
+            content: '네 번째 할일',
+            done: false
+        }
+    ]
 </script>
-<Middle {count} {handleClick}></Middle>
+<ul>
+    {#each todos as todo}
+        <li>
+            <span>{todo.id}</span>
+            <span>{todo.content}</span>
+        </li>
+    {/each}
+
+</ul>
